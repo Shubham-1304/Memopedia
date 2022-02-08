@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memopedia</title>
+</head>
+<body style="background-color: dimgray;">
+    {% for meme in memes %}
+    <img id={{meme.id}} src= {{meme.url}} width={{meme.width}} height={{meme.height}}/>
+    <p></p>
+    <div style="background-color: cyan; width:600px;" >
+        <p>Id: {{meme.id}}</p>
+        <p>Name: {{meme.name}}</p>
+        <p>URL: <a href={{meme.url}}>{{meme.url}}</a></p>
+        <p>Width: {{meme.width}}</p>
+        <p>Height: {{meme.height}}</p>
+        <p>Box_Count: {{meme.box_count}}</p>
+    </div>
+    <br>
+    {% endfor %}
+    
+</body>
+</html>
